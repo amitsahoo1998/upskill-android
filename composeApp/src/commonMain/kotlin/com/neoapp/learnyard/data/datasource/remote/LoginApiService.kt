@@ -1,7 +1,7 @@
 package com.neoapp.learnyard.data.datasource.remote
 
-import com.neoapp.learnyard.data.model.BaseResponse
 import com.neoapp.learnyard.data.model.RegisterRequest
+import com.neoapp.learnyard.data.model.response.LoginResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.post
@@ -11,7 +11,7 @@ import io.ktor.http.contentType
 
 class LoginApiService (private val httpClient : HttpClient) {
 
-    suspend fun register(registerRequest: RegisterRequest) : BaseResponse{
+    suspend fun register(registerRequest: RegisterRequest) : LoginResponse{
         return httpClient.post(REGISTER_API) {
             contentType(ContentType.Application.Json)
             setBody(registerRequest)
