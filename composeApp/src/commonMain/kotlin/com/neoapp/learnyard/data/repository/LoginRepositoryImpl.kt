@@ -1,10 +1,10 @@
-package com.neoapp.learnyard.data.repository.impl
+package com.neoapp.learnyard.data.repository
 
 import com.neoapp.learnyard.data.datasource.remote.LoginApiService
 import com.neoapp.learnyard.data.model.Either
 import com.neoapp.learnyard.data.model.RegisterRequest
 import com.neoapp.learnyard.data.model.response.LoginResponse
-import com.neoapp.learnyard.data.repository.LoginRepository
+import com.neoapp.learnyard.domain.repository.LoginRepository
 
 class LoginRepositoryImpl (private val loginApiService: LoginApiService) : LoginRepository {
      override suspend fun register(registerRequest: RegisterRequest): Either<LoginResponse> {

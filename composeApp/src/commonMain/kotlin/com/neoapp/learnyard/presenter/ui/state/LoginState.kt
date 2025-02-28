@@ -1,4 +1,4 @@
-package com.neoapp.learnyard.ui.state
+package com.neoapp.learnyard.presenter.ui.state
 
 data class LoginState(
     val isLoading: Boolean = false,

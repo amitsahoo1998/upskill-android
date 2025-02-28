@@ -1,9 +1,9 @@
-package com.neoapp.learnyard.ui.viewmodels
+package com.neoapp.learnyard.presenter.ui.viewmodels
 
 import androidx.lifecycle.viewModelScope
 import com.neoapp.learnyard.data.model.RegisterRequest
-import com.neoapp.learnyard.data.repository.LoginRepository
-import com.neoapp.learnyard.ui.state.LoginState
+import com.neoapp.learnyard.domain.repository.LoginRepository
+import com.neoapp.learnyard.presenter.ui.state.LoginState
 import kotlinx.coroutines.launch
 
 

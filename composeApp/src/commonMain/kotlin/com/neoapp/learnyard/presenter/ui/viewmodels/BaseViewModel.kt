@@ -1,7 +1,7 @@
-package com.neoapp.learnyard.ui.viewmodels
+package com.neoapp.learnyard.presenter.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.neoapp.learnyard.ui.state.State
+import com.neoapp.learnyard.presenter.ui.state.State
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
