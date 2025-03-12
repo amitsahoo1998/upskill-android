@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.neoapp.learnyard.presenter.screens.SplashScreen
 import com.neoapp.learnyard.presenter.ui.Screen
 
 const val APP_NAV_HOST_ROUTE = "app-main-route"
@@ -14,9 +15,11 @@ fun MainNavigation() {
     val navController = rememberNavController()
 
     NavHost(navController = navController,
-        startDestination = Screen.Login.route){
+        startDestination = Screen.Splash.route){
 
-        composable()
+        composable(Screen.Splash.route){
+            SplashScreen()
+        }
 
     }
 

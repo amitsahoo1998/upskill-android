@@ -5,18 +5,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import learnyard.composeapp.generated.resources.Res
-import learnyard.composeapp.generated.resources.lato_bold
 
 @Composable
 fun AppFullWidthButton(
@@ -36,18 +29,10 @@ fun AppFullWidthButton(
     ) {
         Text(
             text = text,
-            style = typography.subtitle1,
-            color = Color.White,
-            fontFamily = latoFontFamily
+            style = MaterialTheme.typography.body1.copy(
+                color = MaterialTheme.colors.primary
+            ),
+            color = Color.White
         )
     }
 }
-private val latoFontFamily = FontFamily(
-    fonts = listOf(
-        Font(
-            resId = Res.font.lato_bold,
-            weight = FontWeight.W900,
-            style = FontStyle.Normal
-        )
-    )
-)
