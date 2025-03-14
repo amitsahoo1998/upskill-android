@@ -13,6 +13,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import com.neoapp.learnyard.presenter.component.AppFullWidthButton
 import learnyard.composeapp.generated.resources.Res
@@ -22,7 +23,9 @@ import learnyard.composeapp.generated.resources.logo_name
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun SplashScreen() {
+fun SplashScreen(
+    navigateToLogin: () -> Unit
+) {
     Column(
         verticalArrangement = Arrangement.SpaceBetween, modifier = Modifier.fillMaxHeight()
     ) {
@@ -51,8 +54,9 @@ fun SplashScreen() {
         AppFullWidthButton(
             text = "Let’s start",
             enabled = true,
-            onClick = {  },
-            modifier = Modifier.padding(vertical = 30.dp, horizontal = 16.dp).background(color = MaterialTheme.colors.primary, shape = RoundedCornerShape(20.dp))
+            onClick = navigateToLogin,
+            modifier = Modifier.padding(vertical = 30.dp, horizontal = 16.dp)
+                .clip(RoundedCornerShape(10.dp))
         )
     }
 }
